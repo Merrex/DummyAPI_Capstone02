@@ -21,9 +21,9 @@ public class CreateUserRequestBody {
         private String email;
 
         public Builder(){
-            this.firstName="rupjit";
-            this.lastName="bose";
-            this.email= UUID.randomUUID() + "@gmail.com";
+            this.firstName="Mayur";
+            this.lastName="Kumar";
+            this.email= UUID.randomUUID() + "@mayur.com";
         }
         public Builder email(String email){
             this.email=email;

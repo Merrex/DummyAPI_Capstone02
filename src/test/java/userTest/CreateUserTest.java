@@ -17,11 +17,11 @@ public class CreateUserTest {
     @Test
     public void shouldCreateAnUser(){
         //arrange
-        CreateUserRequestBody cuReqBody=new CreateUserRequestBody.Builder().build();
+        CreateUserRequestBody createUserRequestBody=new CreateUserRequestBody.Builder().build();
         //act
-        CreateUserSuccessResponse createUserSuccessResponse = userService.createUser(cuReqBody);
+        CreateUserSuccessResponse createUserSuccessResponse = userService.createUser(createUserRequestBody);
         //assert
-        createUserSuccessResponse.assertUserInfo(cuReqBody);
+        createUserSuccessResponse.assertUserInfo(createUserRequestBody);
 
     }
 }
