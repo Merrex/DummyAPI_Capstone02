@@ -31,13 +31,13 @@ public class CreateBlogPostResponse {
 
     private List<String> tags;
 
-    public void assertBlogPost(CreateBlogPostRequestBody createBlogPostRequestBody) {
+    public void assertBlogPost(CreateBlogPostRequestBody blogPostRequestBody) {
         assertEquals(this.statusCode,200);
-        assertEquals(this.getOwner().id, createBlogPostRequestBody.getOwner());
-        assertEquals(this.image, createBlogPostRequestBody.getImage());
-        assertEquals(this.text, createBlogPostRequestBody.getText());
-        assertEquals(this.likes, createBlogPostRequestBody.getLikes());
-        assertEquals(this.tags, createBlogPostRequestBody.getTags());
+        assertEquals(this.getOwner().id, blogPostRequestBody.getOwner());
+        assertEquals(this.image, blogPostRequestBody.getImage());
+        assertEquals(this.text, blogPostRequestBody.getText());
+        assertEquals(this.likes, blogPostRequestBody.getLikes());
+        assertEquals(this.tags, blogPostRequestBody.getTags());
     }
 
     @Getter

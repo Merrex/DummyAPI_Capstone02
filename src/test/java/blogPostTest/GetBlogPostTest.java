@@ -1,7 +1,8 @@
 package blogPostTest;
 
 import blogs.BlogService;
-import blogs.get.response.GetPostResponse;
+import blogs.create.request.CreateBlogPostRequestBody;
+import blogs.get.GetPostResponse;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,12 +17,12 @@ public class GetBlogPostTest {
     @Test
     public void shouldGetPostById(){
         //arrange
-//        CreateBlogPostResquestBody createBlogPostResquestBody=new CreateBlogPostResquestBody.Builder().build();
-//        String id=blogService.createBlog(createBlogPostResquestBody).getId();
+        CreateBlogPostRequestBody createBlogPostRequestBody =new CreateBlogPostRequestBody.Builder().build();
+        String id=blogService.createBlog(createBlogPostRequestBody).getId();
         //act
-        GetPostResponse getPostResponse=blogService.getPostById("63d3b44bb3d198267fb62085");
+        GetPostResponse getPostResponse=blogService.getPostById(id);
         //assert
-        Assert.assertEquals(getPostResponse.getId(),"63d3b44bb3d198267fb62085");
+        Assert.assertEquals(getPostResponse.getId(),id);
         Assert.assertEquals(getPostResponse.getStatusCode(),200);
     }
 }

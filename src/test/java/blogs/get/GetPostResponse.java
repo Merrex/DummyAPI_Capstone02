@@ -1,4 +1,4 @@
-package blogs.get.response;
+package blogs.get;
 
 import lombok.Getter;
 import lombok.Setter;

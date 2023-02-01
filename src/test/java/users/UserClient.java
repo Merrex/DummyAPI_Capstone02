@@ -2,7 +2,7 @@ package users;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import users.create.CreateUserRequestBody;
+import users.create.request.CreateUserRequestBody;
 
 import static io.restassured.RestAssured.given;
 

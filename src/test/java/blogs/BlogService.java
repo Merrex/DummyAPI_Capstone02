@@ -1,9 +1,9 @@
 package blogs;
 import blogs.create.request.CreateBlogPostRequestBody;
 import blogs.create.response.CreateBlogPostResponse;
-import blogs.delete.response.DeleteBlogPostResponse;
-import blogs.get.response.GetPostErrorResponse;
-import blogs.get.response.GetPostResponse;
+import blogs.delete.DeleteBlogPostResponse;
+import blogs.get.GetPostErrorResponse;
+import blogs.get.GetPostResponse;
 import io.restassured.response.Response;
 
 

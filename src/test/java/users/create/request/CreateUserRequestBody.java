@@ -1,4 +1,4 @@
-package users.create;
+package users.create.request;
 
 import lombok.Getter;
 

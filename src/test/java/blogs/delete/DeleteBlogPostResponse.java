@@ -1,4 +1,4 @@
-package blogs.delete.response;
+package blogs.delete;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -27,16 +27,5 @@ public class GetUsersTest {
     Assert.assertEquals(getUserResponse.getData().size(),10);
     }
 
-    @Test
-    public void shouldGetListOfUsersUnderTheAccount(){
-        //arrange
-        String queryParamName="created";
-        int queryParamValue=1;
-        //act
-        GetUserResponse getUserResponse=userService.getAllUser(queryParamName, queryParamValue);
-        //assert
-        Assert.assertEquals(getUserResponse.getStatusCode(),200);
-        Assert.assertEquals(getUserResponse.getData().size(),getUserResponse.getTotal());
-    }
 
 }

@@ -1,12 +1,14 @@
 package E2EIntegrationTests;
 
+
 import blogs.BlogService;
 import blogs.create.request.CreateBlogPostRequestBody;
 import blogs.create.response.CreateBlogPostResponse;
-import blogs.delete.response.DeleteBlogPostResponse;
-import blogs.get.response.GetPostResponse;
+import blogs.delete.DeleteBlogPostResponse;
+import blogs.get.GetPostResponse;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 
 public class EndToEndBlogPostTest {
     private BlogService blogService;
@@ -18,7 +20,6 @@ public class EndToEndBlogPostTest {
 
     @Test
     public void shouldCreateGetAndDeleteBlogPost(){
-
         //arrange
         CreateBlogPostRequestBody createBlogPostRequestBody =new CreateBlogPostRequestBody.Builder().build();
         CreateBlogPostResponse createBlogPostResponse= blogService.createBlog(createBlogPostRequestBody);

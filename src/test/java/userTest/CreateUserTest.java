@@ -3,8 +3,8 @@ package userTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import users.UserService;
-import users.create.CreateUserRequestBody;
-import users.create.response.CreateUserSuccessResponse;
+import users.create.request.CreateUserRequestBody;
+import users.create.response.CreateUserSuccessResponseBody;
 
 public class CreateUserTest {
 
@@ -19,9 +19,9 @@ public class CreateUserTest {
         //arrange
         CreateUserRequestBody createUserRequestBody=new CreateUserRequestBody.Builder().build();
         //act
-        CreateUserSuccessResponse createUserSuccessResponse = userService.createUser(createUserRequestBody);
+        CreateUserSuccessResponseBody createUserSuccessResponseBody = userService.createUserSuccessResponse(createUserRequestBody);
         //assert
-        createUserSuccessResponse.assertUserInfo(createUserRequestBody);
+        createUserSuccessResponseBody.assertUserInfo(createUserRequestBody);
 
     }
 }

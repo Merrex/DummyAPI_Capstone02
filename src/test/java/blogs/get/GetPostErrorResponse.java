@@ -1,4 +1,4 @@
-package blogs.get.response;
+package blogs.get;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +12,6 @@ public class GetPostErrorResponse {
 
     public void assertError(int expectedStatusCode, String msg) {
         Assert.assertEquals(this.statusCode,expectedStatusCode);
-        Assert.assertEquals(this.error,msg);
+        Assert.assertEquals(error,msg);
     }
 }
